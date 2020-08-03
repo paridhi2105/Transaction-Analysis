@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 data=pd.read_excel("ANZ synthesised transaction dataset.xlsx")
 tmp=data.head()
-#we assume that a customer uses all the balance he has over the 3 month period.
+#We assume that a customer uses all the 'balance' he has over the 3 month period.The total 'amount' used by each customer can be approximated as his salary for three month period.
 corr_age=list()
 corr_gender=list()
 salary_data=data[['amount','customer_id']]
