@@ -13,4 +13,4 @@
 
 #Build a simple regression model to predict the annual salary for each customer using the attributes identified above
 
-#Print the accurate of the model
+#Print the accuracy of the model
