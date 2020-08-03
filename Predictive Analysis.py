@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 data=pd.read_excel("ANZ synthesised transaction dataset.xlsx")
-#tmp=data.head()
+tmp=data.head()
 #we assume that a customer uses all the balance he has over the 3 month period.
 corr_age=list()
 corr_gender=list()
@@ -66,7 +66,7 @@ features=np.array(col_transformer.fit_transform(features_original),dtype=np.floa
 features=features[:,1:]
 features=pd.DataFrame(features,columns=['gender','age'])
 features['gender']=(features['gender']-features['age'].mean())/features['gender'].std()
-#features=np.array(features)
+#features=np.array(features)      
 features_train,features_test,label_train,label_test=train_test_split(features,label,test_size=0.2)
 model=LinearRegression()
 model.fit(features_train,label_train)
